@@ -7,7 +7,7 @@ import jakarta.inject.Singleton;
 @Secondary
 public class CosoleLogger implements Logger {
     @Override
-    public  void log(){
+    public void log() {
         System.out.println("Logging to Console");
     }
 }

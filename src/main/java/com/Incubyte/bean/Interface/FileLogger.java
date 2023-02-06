@@ -7,7 +7,7 @@ import jakarta.inject.Singleton;
 @Primary
 public class FileLogger implements Logger {
     @Override
-    public void log(){
+    public void log() {
         System.out.println("Logging to File");
     }
 }

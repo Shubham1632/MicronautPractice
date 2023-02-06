@@ -17,15 +17,17 @@ public class PokemonController {
     }
 
     @Get
-    public HttpResponse<List<PokemonModel>> getAllPokemons(){
+    public HttpResponse<List<PokemonModel>> getAllPokemons() {
         return HttpResponse.ok(pokemonService.getAllPokemons());
     }
+
     @Post
-    public HttpResponse<PokemonModel> addPokemon(@Body PokemonModel pokemon){
-        return  HttpResponse.created(pokemonService.addPokemon(pokemon));
+    public HttpResponse<PokemonModel> addPokemon(@Body PokemonModel pokemon) {
+        return HttpResponse.created(pokemonService.addPokemon(pokemon));
     }
+
     @Get("/{currId}")
-    public HttpResponse<PokemonModel> getPokemonById(@PathVariable int currId){
+    public HttpResponse<PokemonModel> getPokemonById(@PathVariable int currId) {
         return HttpResponse.ok(pokemonService.getPokemonById(currId));
     }
 
